@@ -87,6 +87,9 @@ rm(temp.df)
 library(lubridate)  # dmy_hms() ; works with any standard date format
 time <- dmy_hms( paste(df$Date, df$Time) )
 
+# Alternate method (adapted from Discussion Forum):
+# time <- strptime(paste(df$Date,df$Time), "%d/%m/%Y %H:%M:%S")
+
 #--------------------------------------------------------------------------
 # 3. Plot the data
 #--------------------------------------------------------------------------
