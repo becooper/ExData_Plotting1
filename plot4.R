@@ -131,7 +131,7 @@ plot( time, df$Voltage, type = "l", xlab = xlabel, ylab = ylabel )
 # Subplot 3: day/time versus energy sub metering
 #--------------------------------------------------------------------------
 
-# This plot is identical to plot3.png
+# This plot is identical to plot3.png, except there is no legend border
 
 title = ""
 xlabel = ""
@@ -143,7 +143,8 @@ var3 <- "Sub_metering_3"
 plot( time, df[,var1], type = "l", xlab = xlabel, ylab = ylabel, col = "black" )
 points( time, df[,var2], type = "l", col = "red" )
 points( time, df[,var3], type = "l", col = "blue" )
-legend( "topright", col = c("black", "red", "blue"), legend = c(var1, var2, var3), lty = 1 )
+legend( "topright", col = c("black", "red", "blue"), legend = c(var1, var2,
+var3), lty = 1, bty = "n" )
 
 #--------------------------------------------------------------------------
 # Subplot 4: day/time versus global reactive power
